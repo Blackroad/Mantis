@@ -16,7 +16,8 @@ def load_config(file):
             target = json.load(opened_file)
     return target
 
-@pytest.fixture
+
+@pytest.fixture()
 def app(request):
     global fixture
     browser = request.config.getoption("--browser")
@@ -36,8 +37,6 @@ def stop(request):
 
 
 def pytest_addoption(parser):
-    parser.addoption ("--browser", action='store', default='chrome')
+    parser.addoption ("--browser", action='store', default='firefox')
     parser.addoption("--target", action='store', default='target.json')
-
-
 

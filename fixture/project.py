@@ -1,5 +1,3 @@
-from Model.projectmodel import Project
-
 class ProjectHelper:
     def __init__(self, app):
         self.app = app
