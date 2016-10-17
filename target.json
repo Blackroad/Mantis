@@ -10,13 +10,16 @@
     "username" : "administrator",
     "password" : "root"
   },
-  "db":{
-    "host":"localhost",
-    "name":"bugtracker",
-    "user":"root",
-    "password":""
+  "db": {
+    "host": "localhost",
+    "name": "bugtracker",
+    "user": "root",
+    "password": ""
+  },
+  "ftp":{
+    "host": "localhost",
+    "username": "mantis",
+    "password":"mantis"
   }
-
-
 
 }
