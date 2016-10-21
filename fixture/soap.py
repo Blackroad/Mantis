@@ -11,13 +11,16 @@ class SoapHelper:
         client = Client("http://localhost/mantisbt-1.3.2/api/soap/mantisconnect.wsdl")
         try:
             client.service.mc_login(username,password)
+            return True
         except WebFault:
             return False
 
 
-    def added_project(self, username, password, project):
+    def added_project(self, username, password, project_name):
         client = Client("http://localhost/mantisbt-1.3.2/api/soap/mantisconnect.php?wsdl")
+
         try:
-            client.service.mc_project_add(username, password, project)
+            client.service.mc_project_add(username, password, project_name)
+            return True
         except WebFault:
             return False

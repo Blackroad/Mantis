@@ -11,5 +11,6 @@ def test_add_new_project(app,db):
     app.project.add_new_project(project_data)
     new_project_list = db.get_project_list()
     current_project_list.append(project_data)
+    project_name = project_data.name
    # assert sorted(current_project_list, key=Project.id_or_max) == sorted(new_project_list, key=Project.id_or_max)
-    assert app.soap.added_project(username, password, new_project_list)
+    assert app.soap.added_project(username, password, project_name)
